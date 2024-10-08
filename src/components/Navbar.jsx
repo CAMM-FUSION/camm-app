@@ -11,7 +11,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#A9643E] text-white   flex align-middle items-center justify-between p-4 py-2 nav-bar rounded-full">
+    <div className='w-[100vw] h-[10%] flex justify-center content-center'>    
+    <nav className="bg-[white] text-[#A9643E] absolute z-20 top-10 flex align-middle items-center  w-[80%] mx-auto nav-bar rounded-full border-solid border-2 border-[#A9643E]">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="text-lg font-bold">
           CAMM FUSION
@@ -49,6 +50,7 @@ const Navbar = () => {
         </ul>
       </div>
     </nav>
+    </div>
   );
 };
 

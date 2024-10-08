@@ -62,7 +62,7 @@ const HeroSection = () => {
               {slides.map((slide, index) => (
                 <div key={index} className="relative h-[100vh]">
                   {slide.type === 'video' ? (
-                    <video className="w-[99vw] md:w-auto h-screen object-cover" autoPlay loop muted>
+                    <video className="w-[100vw] md:w-auto h-screen object-cover" autoPlay loop muted>
                       <source src={slide.src} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
