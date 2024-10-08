@@ -4,15 +4,12 @@ import { FiEdit, FiTrash } from "react-icons/fi";
 
 const BookCard = ({ book }) => {
   return (
-    <Link
-      to={`/books/${book.id}`}
-      key={book.id}
-      className="bg-white p-4 rounded shadow"
-    >
+    <div className="bg-[url('./assets/bookcard.jpg')] bg-cover  bg-no-repeat h-[100%] w-[100%]">
+ <Link to={`/books/${book.id}`} key={book.id}>
       <h2 className="text-xl font-bold">{book.title}</h2>
-      <p className="text-gray-600">Author: {book.author}</p>
+      <p className="text-white">Author: {book.author}</p>
       <div className="flex justify-between mt-4">
-        <Link to={`/books/${book.id}`} className="text-indigo-600">
+        <Link to={`/books/${book.id}`} className="text-white">
           View Details
         </Link>
         <div className="flex">
@@ -28,6 +25,8 @@ const BookCard = ({ book }) => {
         </div>
       </div>
     </Link>
+    </div>
+   
   );
 };
 
