@@ -1,88 +1,103 @@
-import React from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
-import video from '../assets/hero1.mp4'; 
-import image1 from '../assets/hero3.jpg'; 
-import image2 from '../assets/hero4.jpg'; 
-import image3 from '../assets/hero5.jpg'; 
-import image4 from '../assets/hero6.jpg'; 
-// import Navbar from './Navbar';
+import React from "react"; 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import image1 from "../assets/slide1.png";
+import image2 from "../assets/slide2.png";
+import image3 from "../assets/slide3.png";
+import image4 from "../assets/slide4.png";
+import image5 from "../assets/form3.jpg";
+import Sidebar from "./SideBar"; // Updated import for Sidebar
 
 const HeroSection = () => {
   const settings = {
-    dots:false,
+    dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1000, // Transition speed
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,         
-    autoplaySpeed: 5000,     
+    autoplay: true,
+    autoplaySpeed: 4000, // 4 seconds per slide
+    fade: true, // Smooth fade transition
+    pauseOnHover: false, // Ensure autoplay continues
   };
 
   const slides = [
     {
-      type: 'video',
-      src: video, 
-      overlayText: 'Welcome to the Library',
+      type: "image",
+      src: image1,
+      overlayText: "CAMM FUSION is your all-in-one library management solution",
     },
     {
-      type: 'image',
-      src: image1, 
-      overlayText: 'Discover New Books',
+      type: "image",
+      src: image2,
+      overlayText:
+        "It’s designed to streamline cataloging, borrowing, and organizing resources with ease",
     },
     {
-      type: 'image',
-      src: image2, 
-      overlayText: 'Join a Community of Readers',
+      type: "image",
+      src: image3,
+      overlayText:
+        "Whether you’re managing a personal collection or a large institution, CAMM FUSION fits your needs",
     },
     {
-      type: 'image',
-      src: image3, 
-      overlayText: 'Find Your Next Favorite',
+      type: "image",
+      src: image4,
+      overlayText:
+        "The app simplifies every step of the library management process",
     },
     {
-      type: 'image',
-      src: image4, 
-      overlayText: 'Read Anytime, Anywhere',
+      type: "image",
+      src: image5,
+      overlayText:
+        "With a user-friendly interface and powerful features, it helps keep your library running smoothly",
     },
   ];
 
   return (
-<>
-
-
-          
-          <div className="relative overflow-x-hidden">
-          {/* <div >
-<Navbar/>
-</div> */}
-            <Slider {...settings} className="hero-slider">
-              {slides.map((slide, index) => (
-                <div key={index} className="relative h-[100vh]">
-                  {slide.type === 'video' ? (
-                    <video className="w-[100vw] md:w-auto h-screen object-cover" autoPlay loop muted>
-                      <source src={slide.src} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  ) : (
-                    <img
-                      src={slide.src}
-                      alt={slide.overlayText}
-                      className="w-full h-full object-cover"
-                    />
-                  )}
-                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-2xl">
-                    {slide.overlayText}
-                  </div>
+    <>
+      {/* Render Sidebar */}
+      <Sidebar /> 
+      <div className="relative overflow-x-hidden">
+        <Slider {...settings} className="hero-slider">
+          {slides.map((slide, index) => (
+            <div key={index} className="relative h-[100vh]">
+              {slide.type === "video" ? (
+                <video
+                  className="w-[100vw] md:w-auto h-screen object-contain"
+                  autoPlay
+                  loop
+                  muted
+                >
+                  <source src={slide.src} type="video/mp4" />
+                </video>
+              ) : (
+                <img
+                  src={slide.src}
+                  alt={slide.overlayText}
+                  className="w-full h-full object-contain" // Use object-contain to fit the image fully
+                />
+              )}
+              {/* Updated Overlay Positioning and Styling */}
+              <div
+                className={`absolute inset-0 flex items-center ${
+                  index === 3 || index === 4 ? "justify-center" : "ml-20 md:ml-20 lg:ml-32"
+                }`}
+              >
+                <div
+                  className="text-white font-bold text-3xl md:text-4xl lg:text-5xl w-[40%] bg-blue-600 bg-opacity-50 p-4 rounded-lg animate-fadeInScale"
+                  style={{
+                    textAlign: index === 3 || index === 4 ? "center" : "left",
+                  }}
+                >
+                  {slide.overlayText}
                 </div>
-              ))}
-            </Slider>
-          </div>
-</>
-    
-           
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </>
   );
 };
 

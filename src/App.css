@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.book-title {
+    margin-top: -500px;
+}
+
+body {
+font-family: "Playfair Display", serif;
+font-optical-sizing: auto;
+font-weight: 500;
+font-style: normal;
+}
