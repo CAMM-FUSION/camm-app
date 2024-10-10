@@ -17,7 +17,7 @@ const BookDetail = () => {
     <div>
       <h1 className="text-3xl font-bold">{book.title}</h1>
       <p className="text-gray-600 mt-2">Author: {book.author}</p>
-      <p className="text-gray-600 mt-4">Description: {book.description}</p>
+      <p className="text-gray-600 mt-4">Summary: {book.summary}</p>
     </div>
   );
 };

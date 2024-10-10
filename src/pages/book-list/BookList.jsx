@@ -31,9 +31,9 @@ const BookList = () => {
           <input
             type="text"
             placeholder="Find Book"
-            className="w-[40%]  max-w-sm px-4 py-2 border border-blue-400 rounded-md focus:outline-none"
+            className="w-[40%]  max-w-sm px-4 py-2 border-2 border-blue-400 rounded-md focus:outline-none"
           />
-          <div className="flex ml-[-5%]">
+          <div className="flex ml-[-7%]">
             <button className="w-[20%] font-bold text-2xl " type="button">
               <CiSearch />
             </button>
