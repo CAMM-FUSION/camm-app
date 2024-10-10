@@ -82,4 +82,4 @@ export const K = {
 
 
 
-export const BASE_URL = " https://camm-api.onrender.com/";
+export const BASE_URL = " https://camm-api.onrender.com";

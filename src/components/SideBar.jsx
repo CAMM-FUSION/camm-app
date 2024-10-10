@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { FaHome, FaPlus, FaListAlt, FaInfoCircle, FaEnvelope } from 'react-icons/fa'; // Import icons
-import logo from '../assets/logo.png'; // Import the logo image
+import logo from '../assets/logo11.jpg'; // Import the logo image
 
 const Sidebar = () => {
   return (
