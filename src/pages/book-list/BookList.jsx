@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BASE_URL } from "../../constants"; 
+import { BASE_URL } from "../../constants";
 import { Link } from "react-router-dom";
 import { FiEdit, FiTrash } from "react-icons/fi";
 import { CiSearch } from "react-icons/ci";
@@ -31,9 +31,10 @@ const BookList = () => {
   const handleSearch = () => {
     if (searchTerm) {
       // Filter books based on search term
-      const filtered = books.filter(book => 
-        book.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-        book.author.toLowerCase().includes(searchTerm.toLowerCase())
+      const filtered = books.filter(
+        (book) =>
+          book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          book.author.toLowerCase().includes(searchTerm.toLowerCase())
       );
 
       setFilteredBooks(filtered); // Update the filtered books state
@@ -62,7 +63,8 @@ const BookList = () => {
 
   // Delete a book by ID
   const handleDelete = async (id) => {
-    if (window.confirm("Are you sure you want to delete this book?")) { // Confirm deletion
+    if (window.confirm("Are you sure you want to delete this book?")) {
+      // Confirm deletion
       try {
         await axios.delete(`${BASE_URL}/books/${id}`); // Delete book from API
         getBooks(); // Refresh book list after deletion
@@ -90,7 +92,7 @@ const BookList = () => {
           >
             <CiSearch className="text-white text-xl" />
           </button>
-          
+
           {/* Show Reset button only after a search has been executed */}
           {hasSearched && (
             <button
@@ -121,7 +123,11 @@ const BookList = () => {
         {filteredBooks.map((book, index) => (
           <div key={index} className="text-center">
             <Link to={`/books/${book._id}`}>
-              <img src={book.cover} alt={book.title} className="w-full h-auto rounded-lg" />
+              <img
+                src={book.cover}
+                alt={book.title}
+                className="w-full h-auto rounded-lg"
+              />
             </Link>
             <p className="font-bold text-lg mt-2">{book.title}</p>
             <p className="text-gray-700">{book.author}</p>
