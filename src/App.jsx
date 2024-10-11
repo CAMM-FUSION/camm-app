@@ -7,7 +7,7 @@ import BookDetail from './pages/book-details/BookDetail';
 import BookForm from './pages/add-book/BookForm';
 import HeroSection from './components/HeroSection'; 
 import About from './pages/about/About';
-import Login from './pages/login/login';
+import Login from './pages/login/Login';
 import Home from './pages/home/Home';
 import Review from './pages/review/Review';
 
