@@ -9,6 +9,9 @@ import HeroSection from './components/HeroSection';
 import About from './pages/about/About';
 import Login from './pages/login/Login';
 import Home from './pages/home/Home';
+import Contact from './pages/contact/Contact';
+import Footer from './components/Footer';
+
 import Review from './pages/review/Review';
 
 function App() {
@@ -25,9 +28,11 @@ function App() {
             <Route path="/add" element={<BookForm />} />
             <Route path="/edit/:id" element={<BookForm />} />
             <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/reviews" element={<Review />} /> {/* Updated route to /reviews */}
           </Routes>
         </div>
+        <Footer />
         <ToastContainer />
       </div>
     </Router>
