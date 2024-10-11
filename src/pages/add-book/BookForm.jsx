@@ -48,7 +48,7 @@ const BookForm = () => {
     <div
       className="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-end ml-[10%]"
       style={{
-        backgroundImage: `url("/images/formbg.jpg")`,
+        backgroundImage: `url("/formbg.jpg")`,
       }}
     >
       <div className="bg-white bg-opacity-60 p-8 rounded-lg shadow-lg max-w-md w-full mr-12">
