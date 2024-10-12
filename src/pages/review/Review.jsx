@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FiTrash } from 'react-icons/fi';
 
-const BASE_URL = "https://camm-api.onrender.com"; // Updated to your actual API URL
+const BASE_URL = "https://camm-api.onrender.com"; 
 
 // StarRating Component
 const StarRating = ({ rating, onRatingChange }) => {
@@ -41,7 +41,7 @@ const ThankYouPopup = ({ isOpen, onClose }) => {
   );
 };
 
-// Main Review Page Component
+
 const Review = () => {
   const [reviews, setReviews] = useState([]); // State to hold all reviews
   const [title, setTitle] = useState(''); // State to hold book title
@@ -74,7 +74,7 @@ const Review = () => {
 
     try {
       await axios.post(`${BASE_URL}/reviews`, {
-        title,   // Ensure title is being sent in the request
+        title,   
         rating,
         comment
       });
@@ -167,7 +167,7 @@ const Review = () => {
             {reviews.map((review) => (
               <div key={review._id} className="flex justify-between items-center bg-gray-50 p-4 rounded-lg shadow-sm">
                 <div>
-                  <p className="font-semibold"><strong>Title:</strong> {review.title || 'Untitled'}</p> {/* Ensure title displays */}
+                  <p className="font-semibold"><strong>Title:</strong> {review.title || 'Soul'}</p> {/* Ensure title displays */}
                   <p><strong>Rating:</strong> {review.rating} / 5</p>
                   <p><strong>Comment:</strong> {review.comment}</p>
                 </div>

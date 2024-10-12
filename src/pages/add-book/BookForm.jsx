@@ -33,7 +33,7 @@ const BookForm = () => {
         language: formData.get("language"), // Get language input
         genres: formData.get("genres"), // Get genres input
         publisher: formData.get("publisher"), // Get publisher input
-        cover: 'https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg',
+        cover: 'https://marketplace.canva.com/EAFf0E5urqk/1/0/1003w/canva-blue-and-green-surreal-fiction-book-cover-53S3IzrNxvY.jpg',
         NumberOfPages: 54,
       });
       
