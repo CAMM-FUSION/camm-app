@@ -29,7 +29,7 @@ function App() {
       element: <RootLayout />,
       children: [
         { index: true, element: <Login /> },
-        { path: "/home", element: <Login /> },
+        { path: "/home", element: <Home /> },
         { path: "/books", element: <BookList /> },
         { path: "/books/:id", element: <BookDetail /> },
         { path: "/add", element: <BookForm /> },
